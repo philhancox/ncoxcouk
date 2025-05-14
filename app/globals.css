@@ -1,26 +1,98 @@
-@import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --grey: #f4f4f4;
+  --main-gradient-one: pink;
+  --main-gradient-two: darkblue;
+  --secondary-gradient-one: lightpink;
+  --secondary-gradient-two: blue;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', sans-serif;
+}
+html,
+body {
+  height: 100%;
+  background: var(--grey);
+}
+html, body, .container-table {
+  height: 100%;
+}
+.container-table {
+  display: table;
+}
+.vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+p {
+  font-size: 36px;
+  color: dimgrey;
+  padding: 0;
+}
+.icons {
+  font-size: 20px;
+  margin-top: 50px;
+  padding: 0 0 0 5px;
+}
+.icons span {
+  margin-right: 10px;
+}
+.icons a {
+  background: -webkit-linear-gradient(var(--main-gradient-one), var(--main-gradient-two));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+.icons a:hover {
+  background: -webkit-linear-gradient(var(--secondary-gradient-one), var(--secondary-gradient-two));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+.emphasis {
+  color: darkblue;
+  font-size: 56px;
+  background: -webkit-linear-gradient(var(--main-gradient-one), var(--main-gradient-two));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#ncox {
+  background:
+          linear-gradient(var(--grey), var(--grey)) padding-box,
+          linear-gradient(to right, var(--main-gradient-one), var(--main-gradient-two)) border-box;
+  border: 10px solid transparent;
+  border-top: var(--grey);
+  border-left: var(--grey);
+}
+img {
+  float: right;
+}
+@media only screen and (max-width: 1024px) {
+  #ncox {
+    border: none;
+    background: none;
+  }
+  p {
+    text-align: center;
+    font-size: 42px;
+  }
+  img {
+    float: none;
+    color: white;
+    background:
+            linear-gradient(var(--grey), var(--grey)) padding-box,
+            linear-gradient(to right, var(--main-gradient-one), var(--main-gradient-two)) border-box;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    width: 75%;
+    display: block;
+    margin: 35px 0 35px 12.5%;
+  }
+  .icons {
+    font-size: 35px;
+    margin-top: 30px;
+  }
 }
