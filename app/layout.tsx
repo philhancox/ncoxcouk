@@ -9,7 +9,6 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-    weight: ['300', '400', '500', '700'],
     title: "ncox.co.uk, the second home of Phil Hancox",
     description: "Have you seen my email address and wondered what is ncox.co.uk? Well, this is it! :)",
 };
